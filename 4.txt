@@ -1,0 +1,8 @@
+#!/bin/sh
+
+printenv
+
+read -p "Enter variable name: " var
+echo "$var = ${!var}"
+
+echo "$var = $(printenv "$var")"

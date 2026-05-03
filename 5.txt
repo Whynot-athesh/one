@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo "1.All  2.Details  3.By PID  4.My Processes  5.Exit"
+read ch
+
+case $ch in
+1) ps -e ;;
+2) ps -ef ;;
+3) read -p "PID: " pid; ps -fp "$pid" ;;
+4) ps -u "$USER" ;;
+5) exit ;;
+*) echo "Invalid choice" ;;
+esac

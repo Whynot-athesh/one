@@ -1,0 +1,45 @@
+#!/bin/sh
+
+while true
+do
+echo "\n1.Compare  2.Join  3.Length  4.Count  5.Reverse  6.Exit"
+read ch
+
+case $ch in
+1)
+read -p "String1: " s1
+read -p "String2: " s2
+[ "$s1" = "$s2" ] && echo "Equal" || echo "Not Equal"
+;;
+
+2)
+read -p "String1: " s1
+read -p "String2: " s2
+echo "Joined: $s1$s2"
+;;
+
+3)
+read -p "String: " s
+echo "Length: ${#s}"
+;;
+
+4)
+read -p "String: " s
+read -p "Word: " w
+echo "Count: $(echo "$s" | grep -o "$w" | wc -l)"
+;;
+
+5)
+read -p "String: " s
+echo "Reverse: $(echo "$s" | rev)"
+;;
+
+6)
+exit
+;;
+
+*)
+echo "Invalid choice"
+;;
+esac
+done

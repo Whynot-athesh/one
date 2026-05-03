@@ -1,0 +1,13 @@
+#!/bin/sh
+
+file="/home/jnec/test.sh"
+
+[ -r "$file" ] && echo "Readable" || echo "Not readable"
+[ -w "$file" ] && echo "Writable" || echo "Not writable"
+[ -x "$file" ] && echo "Executable" || echo "Not executable"
+
+[ -f "$file" ] && echo "Regular file" || echo "Not a regular file"
+[ -d "$file" ] && echo "Directory" || echo "Not a directory"
+
+[ -s "$file" ] && echo "Not empty" || echo "Empty file"
+[ -e "$file" ] && echo "Exists" || echo "Does not exist"

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+a=10
+b=20
+
+echo "a = $a, b = $b"
+
+# Arithmetic
+echo "Add = $((a + b))"
+echo "Sub = $((a - b))"
+echo "Mul = $((a * b))"
+echo "Div = $((b / a))"
+echo "Mod = $((b % a))"
+
+# Logical
+[ $a -lt 20 ] && [ $b -gt 10 ] && echo "AND TRUE" || echo "AND FALSE"
+[ $a -lt 5 ] || [ $b -gt 10 ] && echo "OR TRUE" || echo "OR FALSE"
+[ ! $a -gt 20 ] && echo "NOT TRUE" || echo "NOT FALSE"
